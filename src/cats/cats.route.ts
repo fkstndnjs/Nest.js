@@ -1,52 +1,13 @@
 import { Cat } from "./cats.model";
 import { Router } from "express";
+import { createCat, getAllCats, getOneCat } from "./cats.service";
 
 const router = Router();
 
-router.get("/", (req, res) => {
-    try {
-        const cats = Cat;
+router.get("/", getAllCats);
 
-        res.status(200).send({
-            success: true,
-            data: cats,
-        });
-    } catch (error) {
-        console.log(error);
+router.get("/:id", getOneCat);
 
-        res.status(400).send({
-            success: false,
-            data: error,
-        });
-    }
-});
-
-router.get("/:id", (req, res) => {
-    try {
-        const cats = Cat.find((cat) => {
-            return cat.id === req.params.id;
-        });
-
-        res.status(200).send({
-            success: true,
-            data: cats,
-        });
-    } catch (error) {
-        console.log(error);
-
-        res.status(400).send({
-            success: false,
-            data: error,
-        });
-    }
-});
-
-router.post("/", (req, res) => {
-    console.log(req.body);
-
-    Cat.push(req.body);
-
-    res.send(req.body);
-});
+router.post("/", createCat);
 
 export default router;
