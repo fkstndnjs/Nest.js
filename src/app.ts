@@ -28,7 +28,7 @@ app.put("/:id", (req, res) => {
 });
 
 app.use((req, res) => {
-  res.status(404).send("404 NOT FOUND!");
+  res.status(404).send("404 NOT FOUND");
 });
 
 app.listen(8000, () => {
