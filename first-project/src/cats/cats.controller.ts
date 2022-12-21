@@ -20,7 +20,7 @@ export class CatsController {
     return 'create cat';
   }
 
-  @Put()
+  @Put(':id')
   updateCat() {
     return 'update cat';
   }
