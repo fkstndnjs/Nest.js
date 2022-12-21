@@ -9,4 +9,9 @@ export class CatsController {
   getAllcat() {
     return 'all cats';
   }
+
+  @Get(':id')
+  getOneCat() {
+    return 'one cat';
+  }
 }
