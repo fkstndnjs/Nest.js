@@ -5,8 +5,8 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
   @Get('/:id')
-  getHello(@Param() param: any): string {
-    console.log(param);
+  getHello(@Param('id') id: string): string {
+    console.log(id);
 
     return 'hello';
   }
