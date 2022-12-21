@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Put } from '@nestjs/common';
+import { Controller, Delete, Get, Post, Put } from '@nestjs/common';
 import { CatsService } from 'src/cats/cats.service';
 
 @Controller('cats')
@@ -23,5 +23,10 @@ export class CatsController {
   @Put()
   updateCat() {
     return 'update cat';
+  }
+
+  @Delete()
+  deleteCat() {
+    return 'delete cat';
   }
 }
