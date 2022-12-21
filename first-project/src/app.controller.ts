@@ -8,6 +8,6 @@ export class AppController {
   getHello(@Query('age') age: string): string {
     console.log(age);
 
-    return 'hello';
+    return this.appService.getHello();
   }
 }
