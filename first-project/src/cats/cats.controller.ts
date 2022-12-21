@@ -25,7 +25,7 @@ export class CatsController {
     return 'update cat';
   }
 
-  @Delete()
+  @Delete(':id')
   deleteCat() {
     return 'delete cat';
   }
