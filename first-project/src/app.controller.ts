@@ -5,8 +5,8 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
   @Get()
-  getHello(@Query() query: any): string {
-    console.log(query);
+  getHello(@Query('age') age: string): string {
+    console.log(age);
 
     return 'hello';
   }
