@@ -5,7 +5,7 @@ import { CatsModule } from './cats/cats.module';
 import { UsersModule } from './users/users.module';
 
 @Module({
-  imports: [CatsModule],
+  imports: [CatsModule, UsersModule],
   controllers: [AppController],
   providers: [AppService],
 })
