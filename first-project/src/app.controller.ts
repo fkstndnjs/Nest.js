@@ -8,10 +8,9 @@ export class AppController {
     private readonly appService: AppService,
     private readonly catsService: CatsService,
   ) {}
-  @Get()
-  getHello(@Query('age') age: string): string {
-    console.log(age);
 
+  @Get()
+  getHello(): string {
     return this.appService.getHello();
   }
 }
