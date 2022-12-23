@@ -1,10 +1,4 @@
-import {
-  Controller,
-  Get,
-  HttpException,
-  Query,
-  UseFilters,
-} from '@nestjs/common';
+import { Controller, Get, HttpException, UseFilters } from '@nestjs/common';
 import { AppService } from './app.service';
 import { HttpExceptionFilter } from './http-exception/http-exception.filter';
 
