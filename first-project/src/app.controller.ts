@@ -6,7 +6,6 @@ import {
   UseFilters,
 } from '@nestjs/common';
 import { AppService } from './app.service';
-import { CatsService } from './cats/cats.service';
 import { HttpExceptionFilter } from './http-exception/http-exception.filter';
 
 @Controller()
