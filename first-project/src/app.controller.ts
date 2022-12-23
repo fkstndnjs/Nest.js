@@ -7,6 +7,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
+  @UseFilters(HttpExceptionFilter)
   getHello(): string {
     throw new HttpException('HTTP EXCEPTION', 500);
 
