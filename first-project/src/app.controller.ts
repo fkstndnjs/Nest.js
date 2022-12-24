@@ -7,6 +7,8 @@ export class AppController {
 
   @Get(':id')
   getHello(@Param('id') id: string): string {
-    return this.appService.getHello();
+    const type = typeof id;
+
+    return { id, type };
   }
 }
