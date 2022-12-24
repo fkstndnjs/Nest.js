@@ -6,7 +6,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get(':id')
-  getHello(@Param('id') id: string): string {
+  getHello(@Param('id') id: string) {
     const type = typeof id;
 
     return { id, type };
