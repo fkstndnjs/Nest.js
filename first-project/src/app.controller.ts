@@ -9,6 +9,8 @@ export class AppController {
 
   @Get()
   getHello() {
-    return 'hello';
+    console.log('hello');
+
+    return null;
   }
 }
