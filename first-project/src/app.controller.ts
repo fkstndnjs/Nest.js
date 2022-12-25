@@ -16,8 +16,6 @@ export class AppController {
 
   @Get()
   getHello() {
-    const type = typeof id;
-
-    return { id, type };
+    return 'hello';
   }
 }
