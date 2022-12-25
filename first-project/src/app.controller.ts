@@ -1,12 +1,5 @@
 import { SuccessInterceptor } from './success/success.interceptor';
-import { ParseStringPipe } from './parse-string/parse-string.pipe';
-import {
-  Controller,
-  Get,
-  Param,
-  ParseIntPipe,
-  UseInterceptors,
-} from '@nestjs/common';
+import { Controller, Get, UseInterceptors } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
