@@ -15,7 +15,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello() id: string) {
+  getHello() {
     const type = typeof id;
 
     return { id, type };
