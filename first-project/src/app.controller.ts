@@ -11,6 +11,6 @@ export class AppController {
   getHello() {
     console.log('hello');
 
-    return null;
+    return { name: 'SeokHyun Yu', age: 25 };
   }
 }
