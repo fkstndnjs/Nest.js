@@ -12,8 +12,8 @@ export class SuccessInterceptor implements NestInterceptor {
     console.log('Before...');
 
     return next.handle().pipe(
-      map(() => {
-        console.log('After...');
+      map((data) => {
+        return { success: true, data };
       }),
     );
   }
