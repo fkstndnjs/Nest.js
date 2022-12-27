@@ -10,7 +10,6 @@ export class AppController {
   @Get()
   getHello() {
     console.log('hello');
-
     return null;
   }
 }
