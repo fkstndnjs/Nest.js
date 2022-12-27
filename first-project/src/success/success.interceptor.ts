@@ -4,7 +4,7 @@ import {
   Injectable,
   NestInterceptor,
 } from '@nestjs/common';
-import { Observable, tap } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable()
 export class SuccessInterceptor implements NestInterceptor {
@@ -12,8 +12,8 @@ export class SuccessInterceptor implements NestInterceptor {
     console.log('Before...');
 
     return next.handle().pipe(
-      tap(() => {
-        console.log('After...');
+      map((data) => {
+        return { success: true, data };
       }),
     );
   }

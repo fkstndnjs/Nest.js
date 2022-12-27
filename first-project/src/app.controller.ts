@@ -9,7 +9,6 @@ export class AppController {
 
   @Get()
   getHello() {
-    console.log('hello');
-    return null;
+    return { name: 'SeokHyun Yu', age: 25 };
   }
 }
